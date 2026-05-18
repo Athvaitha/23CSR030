@@ -50,6 +50,66 @@ const notifications = [
     description: 'Weekend hours have been extended.',
     priority: 8,
   },
+  {
+    id: 9,category: 'Exam Results',
+    title: 'Grade correction notice',
+    description: 'Contact academic office if your grade is missing.',
+    priority: 7,
+  },
+  {
+    id: 10,category: 'Notice',
+    title: 'Library timing update',
+    description: 'Weekend hours have been extended.',
+    priority: 8,
+  },
+  {
+    id: 11,category: 'Placement',
+    title: 'Campus placement drive open for registration',
+    description: 'Eligible students must register before Friday.',
+    priority: 1,
+  },
+  {
+    id: 12, category: 'Exam Results',
+    title: 'Spring semester results published',
+    description: 'Check your result on the student portal.',
+    priority: 2,
+  },
+  {
+    id: 13,category: 'Placement',
+    title: 'Company interview schedule released',
+    description: 'Shortlisted students will receive email invites.',
+    priority: 3,
+  },
+  {
+    id: 14,category: 'Exam Results',
+    title: 'Re-evaluation application deadline',
+    description: 'Submit requests within 7 days of result publication.',
+    priority: 4,
+  },
+  {
+    id: 15,category: 'Event',
+    title: 'Tech fest workshop registrations',
+    description: 'Join workshops on AI, web dev, and design.',
+    priority: 5,
+  },
+  {
+    id: 16, category: 'Placement',
+    title: 'Resume building session for final year students',
+    description: 'Learn how to write a strong placement resume.',
+    priority: 6,
+  },
+  {
+    id: 17,category: 'Exam Results',
+    title: 'Grade correction notice',
+    description: 'Contact academic office if your grade is missing.',
+    priority: 7,
+  },
+  {
+    id: 18,category: 'Notice',
+    title: 'Library timing update',
+    description: 'Weekend hours have been extended.',
+    priority: 8,
+  },
 ];
 
 function App() {
@@ -65,7 +125,7 @@ function App() {
   return (
     <main class = "main">
         <h1>Campus Notification Application</h1>
-        <p >
+        <p>
           Pick how many notifications to display. The list is prioritized by category words like
           <strong> Placement</strong> and <strong>Exam Results</strong>.
         </p>
@@ -88,7 +148,7 @@ function App() {
               <button
                 key={value}
                 type="button"
-                className={value === limit ? 'active' : ''}
+                //className={value === limit ? 'active' : ''}
                 onClick={() => setLimit(value)}
               >
                 {value}
@@ -97,19 +157,19 @@ function App() {
           </div>
         </div>
 
-        <div className="summary">
+        <div >
           Showing {visibleNotifications.length} of {notifications.length} prioritized notifications.
         </div>
 
-        <ul className="notification-list">
+       
           {visibleNotifications.map((item) => (
-            <li key={item.id} className="notification-card">
-              <span className="category-badge">{item.category}</span>
-              <h2>{item.title}</h2>
+            <li >
+              <h2 class="category">{item.category}</h2>
+              <h4>{item.title}</h4>
               <p>{item.description}</p>
             </li>
           ))}
-        </ul>
+        
     </main>
   );
 }

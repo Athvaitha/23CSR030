@@ -2,7 +2,14 @@
   background-color: rgb(13, 52, 87);
   font-family: Ariel;
 }
-
+h4{
+  font-style: italic;
+}
+.category{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  background-color: black;
+}
 .hero {
   position: relative;
 
