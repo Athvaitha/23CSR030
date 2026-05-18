@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useState } from 'react';
 import './App.css'
 
 function App() {
@@ -9,9 +6,8 @@ function App() {
 
   return (
     <>
-      <h1> HI</h1>
+      <h1>Notification Application</h1>
     </>
   )
 }
-
 export default App
