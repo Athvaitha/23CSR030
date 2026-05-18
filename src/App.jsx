@@ -160,8 +160,6 @@ function App() {
         <div >
           Showing {visibleNotifications.length} of {notifications.length} prioritized notifications.
         </div>
-
-       
           {visibleNotifications.map((item) => (
             <li >
               <h2 class="category">{item.category}</h2>
@@ -169,7 +167,6 @@ function App() {
               <p>{item.description}</p>
             </li>
           ))}
-        
     </main>
   );
 }
